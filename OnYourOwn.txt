@@ -1,0 +1,467 @@
+
+John Truong@John MINGW64 /e/OnYourOwn
+$ git config user.name
+John Truong
+
+John Truong@John MINGW64 /e/OnYourOwn
+$ git init
+Initialized empty Git repository in E:/OnYourOwn/.git/
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        HelloPlus.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git add HelloPlus.html
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   HelloPlus.html
+
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git commit -m "First commit"
+[master (root-commit) 8b55e58] First commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 HelloPlus.html
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        base.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git add base.css
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   base.css
+
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git commit -m "Added base"
+[master 8c9b737] Added base
+ 1 file changed, 4 insertions(+)
+ create mode 100644 base.css
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git remote add githubPrime https://github.com/BytingBucs2-0/OnYourOwn
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git remote
+githubPrime
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git push -u githubPrime
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream githubPrime master
+
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git push -u githubPrime master
+Username for 'https://github.com': jtruong@bucs.fsw.edu
+To https://github.com/BytingBucs2-0/OnYourOwn
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/BytingBucs2-0/OnYourOwn'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    HelloPlus.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git add index.html
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    HelloPlus.html
+
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git commit -m "Changed name"
+[master 0ac981c] Changed name
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    HelloPlus.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git checkout -- HelloPlus.html
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ cd
+
+John Truong@John MINGW64 ~
+$ cd /e/OnYourOwn
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ cd ..
+
+John Truong@John MINGW64 /e
+$ pwd
+/e
+
+John Truong@John MINGW64 /e
+$ git clone
+You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recursive           initialize submodules in the clone
+    --recurse-submodules  initialize submodules in the clone
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone by excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+John Truong@John MINGW64 /e
+$ git clone https://github.com/BytingBucs2-0/OnYourOwn
+fatal: destination path 'OnYourOwn' already exists and is not an empty directory     .
+
+John Truong@John MINGW64 /e
+$ git clone https://github.com/BytingBucs2-0/OnYourOwn
+fatal: destination path 'OnYourOwn' already exists and is not an empty directory.
+
+John Truong@John MINGW64 /e
+$ ls -a
+./           inclasswalkthrough.txt                PortableGit/
+../          Kids/                                 SanDiskSecureAccessV2.0/
+2017WebDev/  Notepad++Portable/                    SanDiskSecureAccessV2_win.exe*
+Ch01/        NotepadPlusPlusPortable_7.3.paf.exe*  'Sublime Text 2.0.2 x64'/
+Content/     OnYourOwn/                            'System Volume Information'/
+
+John Truong@John MINGW64 /e
+$ cd /e/OnYourOwn
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ ls -a
+./  ../  .git/  base.css  index.html
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git clone https://github.com/BytingBucs2-0/OnYourOwn .
+fatal: destination path '.' already exists and is not an empty directory.
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git clone https://github.com/BytingBucs2-0/OnYourOwn.
+Cloning into 'OnYourOwn.'...
+Username for 'https://github.com': jtruong@bucs.fsw.edu
+remote: Repository not found.
+fatal: repository 'https://github.com/BytingBucs2-0/OnYourOwn./' not found
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git initi
+git: 'initi' is not a git command. See 'git --help'.
+
+Did you mean this?
+        init
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git init
+Reinitialized existing Git repository in E:/OnYourOwn/.git/
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git clone https://github.com/BytingBucs2-0/OnYourOwn
+Cloning into 'OnYourOwn'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    HelloPlus.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        OnYourOwn/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git checkout -- HelloPlus.html
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        OnYourOwn/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git add OnYourOwn/
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   OnYourOwn/README.md
+
+
+John Truong@John MINGW64 /e/OnYourOwn (master)
+$ cd OnYourOwn
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git add index.html
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index.html
+
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git commit -m "Initial commit"
+[master 874ac6d] Initial commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git push origin master
+Username for 'https://github.com': jtruong@bucs.fsw.edu
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 422 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/BytingBucs2-0/OnYourOwn
+   c7de41e..874ac6d  master -> master
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        base.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git add base.css
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   base.css
+
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git commit -m "Add base stylesheet"
+[master 4449bc2] Add base stylesheet
+ 1 file changed, 4 insertions(+)
+ create mode 100644 base.css
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$ git push origin master
+Username for 'https://github.com': jtruong@bucs.fsw.edu
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 362 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/BytingBucs2-0/OnYourOwn
+   874ac6d..4449bc2  master -> master
+
+John Truong@John MINGW64 /e/OnYourOwn/OnYourOwn (master)
+$
